@@ -1,6 +1,6 @@
 /*
     View: Personeel
-    Personeelsleden in dienst.
+    Description: Personeelsleden in dienst.
 */
 
 SELECT
@@ -9,14 +9,15 @@ SELECT
 
     sis_pers.voorlett AS voorletters,
     sis_pers.roepnaam AS roepnaam,
-    sis_pers.voornamen AS voornamen,
+    -- BUG wordt doorgegeven als Off._voornamen
+    -- sis_pers.voornamen AS voornamen,
     sis_pers.tussenvoeg AS tussenvoegsel,
     -- Geboortenaam gebruiken indien gevraagd	
-    IIF(sis_pers.bgmsnm = true, sis_pers.ms_achtnm, sis_pers.achternaam) AS achternaam,
+    IIF(sis_pers.bgmsnm = true, sis_pers.ms_achtnm, sis_pers.achternaam) AS achternaam
 
     -- CHECK persfunctie tabel bestaat niet, maar staat wel met * in Decibel lijst?
     -- sis_pers.idpersfunctie AS functie_id,
-    sis_pers.c_hfdvak AS hoofdvak_code
+    -- sis_pers.c_hfdvak AS hoofdvak_code
 FROM sis_pers
 WHERE
     sis_pers.dvertrek IS NULL

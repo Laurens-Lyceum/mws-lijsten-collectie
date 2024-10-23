@@ -1,6 +1,6 @@
 /*
 	View: Leerlingen
-	Leerlingen die op dit moment op school zitten.
+	Description: Leerlingen die op dit moment op school zitten.
 */
 
 SELECT
@@ -13,13 +13,15 @@ SELECT
 	sis_leer.tussenvoeg AS tussenvoegsel,
 	sis_leer.achternaam AS achternaam,
 	
-	sis_bgrp.groep AS stamklas
+	sis_stud.studie AS studie_naam,
+	sis_bgrp.groep AS stamklas_naam
+	-- TODO vorige stamklas/blijven zitten/leerlijn
 FROM sis_leer
-	INNER JOIN sis_aanm ON sis_leer.stamnr = sis_aanm.stamnr
-	INNER JOIN sis_bgrp ON sis_aanm.idbgrp = sis_bgrp.idbgrp
+	LEFT JOIN sis_aanm ON sis_leer.stamnr = sis_aanm.stamnr
+	LEFT JOIN sis_bgrp ON sis_aanm.idbgrp = sis_bgrp.idbgrp
+	LEFT JOIN sis_stud ON sis_aanm.idstud = sis_stud.idstud
 
 	-- CHECK komt uit Mag2ADLeerlingen
-	-- INNER JOIN sis_stud ON sis_aanm.idstud = sis_stud.idstud
 	-- INNER JOIN sis_blfa ON sis_stud.idblfa = sis_blfa.idblfa
 WHERE
 	-- FUTURE "active date range" macro

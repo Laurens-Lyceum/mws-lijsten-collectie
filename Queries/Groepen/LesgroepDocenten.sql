@@ -1,9 +1,10 @@
 /*
 	View: LesgroepDocenten
-	Lesgroepen met de docent(en) die les geven in een vak.
+	Description: Lesgroepen met de docent(en) die les geven in een vak.
 */
 
 SELECT
+	sis_pgvk.idpgvk AS lesgroep_docent_koppelid,
 	sis_bgrp.idbgrp AS lesgroep_id,
 	sis_bgrp.groep AS lesgroep_naam,
 	-- Niet alle lesgroepen hebben een intrinsiek vak: stamklassen
