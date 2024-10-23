@@ -1,6 +1,6 @@
 /*
-	View: Studie
-	Studie/klassenlagen (4VWO, 5HAVO, etc).
+	View: Studies
+	Description: Studies
 */
 
 SELECT

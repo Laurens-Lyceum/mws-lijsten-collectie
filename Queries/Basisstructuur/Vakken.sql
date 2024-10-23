@@ -1,6 +1,11 @@
 /*
 	View: Vakken
-	Vakken die op dit moment op school gegeven worden.
+	Description: Vakken die op dit moment op school gegeven worden.
+*/
+
+/*
+	CHECK op LL veel vakken die niet meer gegeven worden maar ook niet vervallen zijn.
+	Alternatief: filter op EXISTS (sis_pgvk/sis_lvak WHERE dbegin <= GETDATE() AND deinde > GETDATE())
 */
 
 SELECT

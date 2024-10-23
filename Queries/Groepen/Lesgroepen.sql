@@ -1,6 +1,6 @@
 /*
     View: Lesgroepen
-    Lesgroepen (stamklassen en clusters).
+    Description: Lesgroepen (stamklassen en clusters).
 */
 
 SELECT
@@ -8,11 +8,6 @@ SELECT
 	sis_bgrp.groep AS lesgroep_naam,
 	sis_bgrp.omschr AS lesgroep_omschrijving,
 	sis_bgrp.bklas AS is_stamklas,
-
-	-- CHECK zijn mentoren geen many-to-many met aanstellings start/eind?
-	-- sis_bgrp.idpers_mentor1 AS mentor1
-	-- sis_bgrp.idpers_mentor1 AS mentor2
-	-- sis_bgrp.idpers_mentor1 AS mentor3
 
 	-- CHECK 1=stamklas, 2=cluster?
 	-- sis_bgrp.groepssoort AS soort_groep
