@@ -6,3 +6,6 @@ Verzameling handige Magister Webservice lijsten voor vaak gebruikte datasets.
 - [sikkepitje.nl](https://sikkepitje.nl)
 	- [De Magister SOAP interface](https://sikkepitje.nl/Tech/MagisterSOAP)
 	- [Magister SOAP 2020](https://sikkepitje.nl/Tech/MagisterSOAP2020)
+
+## Gerelateerd
+- [mws-client-php](https://github.com/Laurens-Lyceum/mws-client-php)
