@@ -16,7 +16,7 @@ SELECT
 	sis_trgk.omschr AS terugkomer_omschrijving,
 	-- sis_trgk.opmerking,
 
-	-- Vreemde veldnamen in de database, maar dit komt overeen met de interface ten tijde van versie 6.4.25.0
+	-- Vreemde veldnamen in de database, maar dit komt overeen met de interface ten tijde van versie 6.4.25.0 (jan 2025)
 	-- MWS tript met de alias "gemeld" voor btrgk_ok
 	sis_trgk.btrgk_ok AS gemeld_ok,
 	sis_trgk.gemeld AS gemeld_niet_of_niet_tijdig

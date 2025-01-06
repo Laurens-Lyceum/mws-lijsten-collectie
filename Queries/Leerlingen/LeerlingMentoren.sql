@@ -1,5 +1,5 @@
 /*
-	View: LeerlingMentoren.
+	View: LeerlingMentoren
 	Description: Mentoren van een leerling.
 	Column: bron
 		- `null` voor persoonlijke mentoren
@@ -24,7 +24,7 @@ WHERE
 SELECT
 	leerment.idleer AS leerling_id,
 	leerment.stamnr AS stamnummer,
-	leerment.mentor_id,
+	leerment.mentor_id AS mentor_id,
 	sis_pers.doc_code AS mentor_code
 FROM
 	(
